@@ -1,0 +1,218 @@
+@charset "UTF-8";
+
+@font-face {
+    font-family: 'android';
+    src: url('fontes/idroid.otf') format('opentype');
+    font-weight: normal;
+}
+
+@font-face {
+    font-family: 'bebas neue';
+    src: url('fontes/BebasNeue-Regular.otf') format('opentype');
+    src: url('fontes/BebasNeue-Regular.ttf') format('truetype');
+    font-weight: normal;
+}
+
+:root{ /* criando variáveis em CSS*/
+    --cor0: #cc6137; /*as declarações de variáveis começa com dois traços "--" */
+    --corfundo: rgb(184, 60, 184);
+
+    /* podemos aplicar essas váriaveis de cora agora em um background por exemplo
+    background-color: var(--corfundo);
+
+    colocando a propriedade background-color com o valor var(nome da variável)
+
+    background-color: var(--corfundo);
+    color: var(--cor0);
+    */
+
+    /* fontes */
+
+    --fontepadrao: 'Trebuchet MS', 'Lucida Sans Unicode', sans-serif;
+    --fontetitulo: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+
+    /*
+    font-family: var(--fontepadrao);
+    */
+}
+
+*{
+    margin: 0px;
+    padding: 0px;
+}
+
+body{
+    margin: 0px;
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #84E1AD;
+}
+
+header{
+    background-image: linear-gradient(to bottom, #3CDB83, #3AD07C, #36C074, #30AC67, #299458,
+    #217445, #195834, #103821);
+    text-align: center;
+    color: white;
+    height: 200px;
+    padding: 10px;
+    box-shadow: 5px 5px 6px 2px rgba(0, 0, 0, 0.397);
+}
+
+header > h1{
+    font-family: 'bebas neue';
+    font-weight: lighter;
+    font-size: 3em;
+    margin-bottom: 10px;
+}
+
+header > p{
+    margin-top: 30px;
+    font-size: 1.2em;
+    width: 460px;
+    margin: auto;
+}
+
+nav{
+    margin-top: 60px;
+}
+
+nav > ul{
+    text-align: left;
+}
+
+nav > ul > li{
+    display: inline;
+    text-decoration: none;
+}
+
+nav > ul > li > a{
+    text-decoration: none;
+    color: white;
+    padding: 10px;
+    margin-left: 10px;
+    border-radius: 3px;
+    font-weight: bold;
+}
+
+header > nav > ul > li > a:hover{
+    background-color: #30AC67;
+    color: #82dba9;
+    text-decoration: none;
+    transition: 0.8s;
+}
+
+
+main{
+    min-width: 320px;
+    max-width: 800px;
+    background-color: white;
+    margin: 0 auto;
+    padding: 20px;
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+    box-shadow: 3px 3px 8px 4px rgba(0, 0, 0, 0.397);
+}
+
+main > h1, h2{
+    padding: 5px;
+    font-family: 'android';
+    color: #195834;
+    background-image: linear-gradient(to right, #3cdb84e3, #3cdb848c, #3cdb844d, #3cdb8421, #3cdb8400);
+}
+
+main > p{
+    text-indent: 50px;
+    text-align: justify;
+    line-height: 1.5em;
+}
+
+main > picture > img{
+    width: 100%;
+}
+
+main img.img-pequena{
+    display: block;
+    margin: auto;
+    max-width: 300px;
+}
+
+div.video{
+    margin: 0px -20px 30px -20px;
+    padding: 20px;
+    position: relative;
+    padding-bottom: 58%;
+    background-color: #103821;
+}
+
+div.video > iframe{
+    position: absolute;
+    top: 5%;
+    left: 5%;
+    width: 90%;
+    height: 90%;
+}
+
+main > section{
+    background-color: #3cdb8480;
+    padding-bottom: 20px;
+    border-radius: 8px;
+    box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.575);
+}
+
+main > section > h4{
+    background-color: #36C074;
+    color: white;
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+    padding: 10px;
+}
+
+main > section > p{
+    padding-left: 20px;
+    padding-right: 20px;
+    text-indent: 50px;
+    text-align: justify;
+    line-height: 1.5em;
+}
+
+main > section > ul{
+    list-style-type: '\2714\00A0\00A0';
+    list-style-position: inside;
+    columns: 2;
+    margin-right: 150px;
+    width: 100%;
+}
+
+footer{
+    text-align: center;
+    background-color: #195834;
+    color: white;
+    margin-top: 15px;
+    padding: 5px;
+}
+
+footer > p{
+    margin: 0px;
+}
+
+footer > p > a{
+    color: white;
+}
+
+a{
+    color: #103821;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+a:hover{
+    color: rgb(102, 102, 211);
+    text-decoration: none;
+}
+
+strong{
+    color: rgba(255, 0, 0, 0.658);
+}
+
+main a::after{
+    content: '\2197\00A0';
+}
